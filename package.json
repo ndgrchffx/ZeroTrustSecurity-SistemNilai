@@ -1,0 +1,21 @@
+{
+  "name": "sistem-nilai-zero-trust",
+  "version": "1.0.0",
+  "description": "Sistem Nilai dengan arsitektur zero trust",
+  "main": "start.js",
+  "scripts": {
+    "seed": "node seed.js",
+    "start": "node start.js",
+    "test": "node test.js",
+    "audit": "node scripts/show-audit.js",
+    "postman": "node scripts/generate-postman.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.3.0",
+    "http-proxy-middleware": "^4.2.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
