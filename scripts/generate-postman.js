@@ -2,6 +2,7 @@
 // Jalankan: npm run postman   lalu import file hasilnya ke Postman.
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 const DEC =
   "const dec = t => JSON.parse(atob(t.split('.')[1].replace(/-/g,'+').replace(/_/g,'/')));";
 const GWS = "{{gateway_secret}}";
@@ -432,6 +433,38 @@ const col = {
   ],
   item: folders.map(([name, items]) => ({ name, item: items })),
 };
+// Bentuk ekspor standar Postman (URL terurai, _postman_id, response[]) agar mudah diimpor.
+function fixUrl(raw) {
+  const [p, q] = raw.split("?");
+  const i = p.indexOf("/");
+  const host = i === -1 ? p : p.slice(0, i);
+  const segs =
+    i === -1
+      ? []
+      : p
+          .slice(i + 1)
+          .split("/")
+          .filter(Boolean);
+  const u = { raw, host: [host], path: segs };
+  if (q)
+    u.query = q.split("&").map((kv) => {
+      const [key, value] = kv.split("=");
+      return { key, value };
+    });
+  return u;
+}
+function walk(items) {
+  for (const it of items) {
+    if (it.item) {
+      walk(it.item);
+      continue;
+    }
+    it.request.url = fixUrl(it.request.url);
+    it.response = [];
+  }
+}
+walk(col.item);
+col.info._postman_id = crypto.randomUUID();
 const out = path.join(
   __dirname,
   "..",

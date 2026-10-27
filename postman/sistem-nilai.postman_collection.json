@@ -2,7 +2,8 @@
   "info": {
     "name": "Sistem Nilai - Zero Trust",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": "Jalankan `npm run seed` lalu `npm start`. Kirim request berurutan dari atas (token tersimpan otomatis). Ulangi demo: `npm run seed` lagi."
+    "description": "Jalankan `npm run seed` lalu `npm start`. Kirim request berurutan dari atas (token tersimpan otomatis). Ulangi demo: `npm run seed` lagi.",
+    "_postman_id": "5743c0ce-038a-42a5-96f4-8b79d6dbc592"
   },
   "variable": [
     {
@@ -44,8 +45,17 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": "{{base_url}}/health"
-          }
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -91,8 +101,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/login"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.2 Login mhs1",
@@ -132,8 +152,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/login"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.3 Login admin1",
@@ -173,8 +203,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/login"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.4 Login password salah (401)",
@@ -212,8 +252,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/login"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.5 Login dari device tidak terdaftar (403)",
@@ -251,8 +301,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/login"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.6 Refresh access token",
@@ -287,8 +347,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/refresh"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/refresh",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.7 Refresh dengan token ngawur (401)",
@@ -322,8 +392,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/refresh"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/refresh",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.8 Token service (client ID + secret)",
@@ -359,8 +439,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/service"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/service",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "service"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.9 Token service dengan secret salah (401)",
@@ -394,8 +484,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/service"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/service",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "service"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.10 Login mhs2 (untuk uji logout)",
@@ -436,8 +536,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/login"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.11 Logout (refresh token dicabut)",
@@ -471,8 +581,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/logout"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/logout",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "1.12 Refresh setelah logout (401)",
@@ -506,8 +626,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/auth/refresh"
-          }
+            "url": {
+              "raw": "{{base_url}}/auth/refresh",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -537,8 +667,17 @@
                 "value": "Bearer {{token_mhs1}}"
               }
             ],
-            "url": "{{nilai_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{nilai_url}}/nilai",
+              "host": [
+                "{{nilai_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "2.2 Akses LANGSUNG ke Service Transkrip :3002 tanpa secret (403)",
@@ -563,8 +702,18 @@
                 "value": "Bearer {{token_mhs1}}"
               }
             ],
-            "url": "{{transkrip_url}}/transkrip/2470001"
-          }
+            "url": {
+              "raw": "{{transkrip_url}}/transkrip/2470001",
+              "host": [
+                "{{transkrip_url}}"
+              ],
+              "path": [
+                "transkrip",
+                "2470001"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "2.3 Secret benar, TANPA token (401)",
@@ -589,8 +738,17 @@
                 "value": "{{gateway_secret}}"
               }
             ],
-            "url": "{{nilai_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{nilai_url}}/nilai",
+              "host": [
+                "{{nilai_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "2.4 Secret benar, token palsu (401)",
@@ -619,8 +777,17 @@
                 "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZSI6Im1haGFzaXN3YSJ9.palsu"
               }
             ],
-            "url": "{{nilai_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{nilai_url}}/nilai",
+              "host": [
+                "{{nilai_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -650,8 +817,17 @@
                 "value": "DEV-MHS-01"
               }
             ],
-            "url": "{{base_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.2 Token valid, tanpa X-Device-ID (403)",
@@ -676,8 +852,17 @@
                 "value": "Bearer {{token_mhs1}}"
               }
             ],
-            "url": "{{base_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.3 Device milik user lain (403)",
@@ -706,8 +891,17 @@
                 "value": "DEV-DOSEN-01"
               }
             ],
-            "url": "{{base_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.4 Mahasiswa lihat nilai sendiri",
@@ -737,8 +931,17 @@
                 "value": "DEV-MHS-01"
               }
             ],
-            "url": "{{base_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.5 Mahasiswa minta nilai NIM lain (403)",
@@ -767,8 +970,23 @@
                 "value": "DEV-MHS-01"
               }
             ],
-            "url": "{{base_url}}/nilai?nim=2470002"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai?nim=2470002",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ],
+              "query": [
+                {
+                  "key": "nim",
+                  "value": "2470002"
+                }
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.6 Dosen lihat nilai kelas yang diampu",
@@ -798,8 +1016,23 @@
                 "value": "DEV-DOSEN-01"
               }
             ],
-            "url": "{{base_url}}/nilai?kelas_id=1"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai?kelas_id=1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ],
+              "query": [
+                {
+                  "key": "kelas_id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.7 Dosen lihat kelas dosen lain (403)",
@@ -828,8 +1061,23 @@
                 "value": "DEV-DOSEN-01"
               }
             ],
-            "url": "{{base_url}}/nilai?kelas_id=2"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai?kelas_id=2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ],
+              "query": [
+                {
+                  "key": "kelas_id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.8 Admin akses /nilai (403)",
@@ -858,8 +1106,17 @@
                 "value": "DEV-ADMIN-01"
               }
             ],
-            "url": "{{base_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.9 Dosen ubah nilai kelasnya",
@@ -901,8 +1158,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/nilai/1"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai",
+                "1"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.10 Dosen ubah nilai kelas dosen lain (403)",
@@ -944,8 +1211,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/nilai/4"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai/4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai",
+                "4"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "3.11 Mahasiswa ubah nilai (403)",
@@ -987,8 +1264,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/nilai/1"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai",
+                "1"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -1037,8 +1324,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/nilai/2"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai",
+                "2"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -1072,8 +1369,19 @@
                 "value": "DEV-DOSEN-01"
               }
             ],
-            "url": "{{base_url}}/kelas/2/finalisasi"
-          }
+            "url": {
+              "raw": "{{base_url}}/kelas/2/finalisasi",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "kelas",
+                "2",
+                "finalisasi"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "5.2 Mahasiswa memfinalisasi (403)",
@@ -1102,8 +1410,19 @@
                 "value": "DEV-MHS-01"
               }
             ],
-            "url": "{{base_url}}/kelas/1/finalisasi"
-          }
+            "url": {
+              "raw": "{{base_url}}/kelas/1/finalisasi",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "kelas",
+                "1",
+                "finalisasi"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "5.3 Dosen finalisasi kelasnya (sinkron ke transkrip)",
@@ -1134,8 +1453,19 @@
               }
             ],
             "description": "Butuh jam akses terbuka.",
-            "url": "{{base_url}}/kelas/1/finalisasi"
-          }
+            "url": {
+              "raw": "{{base_url}}/kelas/1/finalisasi",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "kelas",
+                "1",
+                "finalisasi"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "5.4 Finalisasi ulang (409)",
@@ -1164,8 +1494,19 @@
                 "value": "DEV-DOSEN-01"
               }
             ],
-            "url": "{{base_url}}/kelas/1/finalisasi"
-          }
+            "url": {
+              "raw": "{{base_url}}/kelas/1/finalisasi",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "kelas",
+                "1",
+                "finalisasi"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "5.5 Ubah nilai yang sudah final (403)",
@@ -1207,8 +1548,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/nilai/1"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai",
+                "1"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "5.6 Mahasiswa lihat transkrip sendiri",
@@ -1238,8 +1589,18 @@
                 "value": "DEV-MHS-01"
               }
             ],
-            "url": "{{base_url}}/transkrip/2470001"
-          }
+            "url": {
+              "raw": "{{base_url}}/transkrip/2470001",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transkrip",
+                "2470001"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "5.7 Mahasiswa lihat transkrip NIM lain (403)",
@@ -1268,8 +1629,18 @@
                 "value": "DEV-MHS-01"
               }
             ],
-            "url": "{{base_url}}/transkrip/2470002"
-          }
+            "url": {
+              "raw": "{{base_url}}/transkrip/2470002",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transkrip",
+                "2470002"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "5.8 Admin lihat transkrip mahasiswa mana pun",
@@ -1298,8 +1669,18 @@
                 "value": "DEV-ADMIN-01"
               }
             ],
-            "url": "{{base_url}}/transkrip/2470001"
-          }
+            "url": {
+              "raw": "{{base_url}}/transkrip/2470001",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transkrip",
+                "2470001"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "5.9 Dosen lihat transkrip (403)",
@@ -1328,8 +1709,18 @@
                 "value": "DEV-DOSEN-01"
               }
             ],
-            "url": "{{base_url}}/transkrip/2470001"
-          }
+            "url": {
+              "raw": "{{base_url}}/transkrip/2470001",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transkrip",
+                "2470001"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -1376,8 +1767,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/transkrip/sinkron"
-          }
+            "url": {
+              "raw": "{{base_url}}/transkrip/sinkron",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transkrip",
+                "sinkron"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "6.2 /transkrip/sinkron dengan token SERVICE",
@@ -1416,8 +1817,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/transkrip/sinkron"
-          }
+            "url": {
+              "raw": "{{base_url}}/transkrip/sinkron",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transkrip",
+                "sinkron"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "6.3 Token service akses /nilai (403)",
@@ -1442,8 +1853,17 @@
                 "value": "Bearer {{token_service}}"
               }
             ],
-            "url": "{{base_url}}/nilai"
-          }
+            "url": {
+              "raw": "{{base_url}}/nilai",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "nilai"
+              ]
+            }
+          },
+          "response": []
         },
         {
           "name": "6.4 /transkrip/sinkron tanpa token (401)",
@@ -1477,8 +1897,18 @@
                 }
               }
             },
-            "url": "{{base_url}}/transkrip/sinkron"
-          }
+            "url": {
+              "raw": "{{base_url}}/transkrip/sinkron",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "transkrip",
+                "sinkron"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     }
