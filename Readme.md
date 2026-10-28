@@ -1,6 +1,6 @@
 # Sistem Nilai - Zero Trust Security
 
-Tugas Praktikum Individu Keamanan Informasi (KP70065004), Informatika Universitas Siliwangi.
+Tugas Praktikum Individu Keamanan Informasi, Naila Salsabila 247006111004 Kelas A Informatika Universitas Siliwangi.
 API gateway (PEP) dengan Service Nilai dan Service Transkrip, dibuat dengan Node.js, Express, dan SQLite.
 
 ## Cara menjalankan
